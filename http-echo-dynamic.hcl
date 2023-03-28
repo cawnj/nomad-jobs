@@ -14,7 +14,7 @@ job "http-echo-dynamic" {
       tags = [
         "traefik.enable=true",
         "traefik.http.routers.http-echo.entrypoints=https",
-        "traefik.http.routers.http-echo.rule=Host(`http-echo.continens.xyz`)",
+        "traefik.http.routers.http-echo.rule=Host(`http-echo.plusvasis.xyz`)",
       ]
     }
     task "server" {
