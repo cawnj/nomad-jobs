@@ -35,14 +35,14 @@ job "hedgedoc-db" {
                 ports = ["db"]
 
                 mount {
-                    type = "bind"
-                    source = "/opt/nomad/user_data/TCJfqYSmSxVD8COHvCvqdWnlrkm2/hedgedoc-db"
+                    type = "volume"
+                    source = "TCJfqYSmSxVD8COHvCvqdWnlrkm2-hedgedoc-db"
                     target = "/var/lib/postgresql/data"
                     readonly = false
                 }
                 mount {
-                    type = "bind"
-                    source = "/opt/nomad/user_data/TCJfqYSmSxVD8COHvCvqdWnlrkm2/"
+                    type = "volume"
+                    source = "TCJfqYSmSxVD8COHvCvqdWnlrkm2"
                     target = "/userdata"
                     readonly = false
                 }

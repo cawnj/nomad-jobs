@@ -46,20 +46,19 @@ EOH
                 CMD_PROTOCOL_USESSL = "true"
             }
 
-
             config {
                 image = "quay.io/hedgedoc/hedgedoc:1.9.4"
                 ports = ["http"]
 
                 mount {
-                    type = "bind"
-                    source = "/opt/nomad/user_data/TCJfqYSmSxVD8COHvCvqdWnlrkm2/hedgedoc"
+                    type = "volume"
+                    source = "TCJfqYSmSxVD8COHvCvqdWnlrkm2-hedgedoc"
                     target = "/hedgedoc/public/uploads"
                     readonly = false
                 }
                 mount {
-                    type = "bind"
-                    source = "/opt/nomad/user_data/TCJfqYSmSxVD8COHvCvqdWnlrkm2/"
+                    type = "volume"
+                    source = "TCJfqYSmSxVD8COHvCvqdWnlrkm2"
                     target = "/userdata"
                     readonly = false
                 }
