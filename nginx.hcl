@@ -16,7 +16,7 @@ job "nginx" {
       tags = [
         "traefik.enable=true",
         "traefik.http.routers.nginx.entrypoints=https",
-        "traefik.http.routers.nginx.rule=Host(`nginx.continens.xyz`)",
+        "traefik.http.routers.nginx.rule=Host(`nginx.plusvasis.xyz`)",
       ]
     }
     task "server" {
